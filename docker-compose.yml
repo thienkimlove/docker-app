@@ -1,13 +1,16 @@
 web:  
   #build: .
   image: thienkimlove/docker-app
-  ports:
-    - "8888:80"
+  #ports:
+  #  - "80:80"
   volumes:
     - .:/srv/www
   links:
     - db
 #    - cache
+  environment:
+     VIRTUAL_HOST: docker.tuelinh.vn
+     #VIRTUAL_PORT:8888 
 db:  
   image: mysql:5.6
   environment:
