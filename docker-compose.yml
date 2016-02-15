@@ -1,0 +1,20 @@
+web:  
+  #build: .
+  image: thienkimlove/docker-app
+  ports:
+    - "8888:80"
+  volumes:
+    - .:/srv/www
+  links:
+    - db
+#    - cache
+db:  
+  image: mysql:5.6
+  environment:
+    MYSQL_ROOT_PASSWORD: tieungao
+    MYSQL_DATABASE: dockerapp
+    MYSQL_USER: dockerapp
+    MYSQL_PASSWORD:
+#cache:  
+#  image: memcached:latest
+

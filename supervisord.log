@@ -1,0 +1,6 @@
+2016-02-15 03:05:15,741 CRIT Supervisor running as root (no user in config file)
+2016-02-15 03:05:15,742 INFO supervisord started with pid 1
+2016-02-15 03:05:16,744 INFO spawned: 'php5-fpm' with pid 8
+2016-02-15 03:05:16,745 INFO spawned: 'nginx' with pid 9
+2016-02-15 03:05:17,814 INFO success: php5-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2016-02-15 03:05:17,814 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
