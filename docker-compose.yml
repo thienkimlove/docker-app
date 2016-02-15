@@ -9,7 +9,7 @@ web:
     - db
 #    - cache
   environment:
-     VIRTUAL_HOST: docker.tuelinh.vn
+     VIRTUAL_HOST: doctrine.tuelinh.vn
      #VIRTUAL_PORT:8888 
 db:  
   image: mysql:5.6
@@ -21,7 +21,12 @@ db:
   #ports:
   #  - "33060:3306"
   volumes_from: 
-     - data 
+     - data
+data:
+ image: mysql:5.6
+ command: /bin/true
+ volumes:
+   - /var/lib/mysql 
 #cache:  
 #  image: memcached:latest
 
