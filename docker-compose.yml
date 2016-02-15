@@ -18,8 +18,10 @@ db:
     MYSQL_DATABASE: dockerapp
     MYSQL_USER: dockerapp
     MYSQL_PASSWORD: tieungao
-  ports:
-    - "33060:3306"
+  #ports:
+  #  - "33060:3306"
+  volumes_from: 
+     - data 
 #cache:  
 #  image: memcached:latest
 
