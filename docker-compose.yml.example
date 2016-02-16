@@ -1,5 +1,6 @@
 web:  
   image: thienkimlove/docker-app
+  restart: always
   volumes:
     - .:/srv/www
   links:
@@ -8,6 +9,7 @@ web:
      VIRTUAL_HOST: doctrine.tuelinh.vn
 db:  
   image: mysql:5.6
+  restart: always
   environment:
     MYSQL_ROOT_PASSWORD: tieungao
     MYSQL_DATABASE: dockerapp
