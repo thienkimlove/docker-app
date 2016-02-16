@@ -1,16 +1,11 @@
 web:  
-  #build: .
   image: thienkimlove/docker-app
-  #ports:
-  #  - "80:80"
   volumes:
     - .:/srv/www
   links:
     - db
-#    - cache
   environment:
      VIRTUAL_HOST: doctrine.tuelinh.vn
-     #VIRTUAL_PORT:8888 
 db:  
   image: mysql:5.6
   environment:
@@ -18,8 +13,6 @@ db:
     MYSQL_DATABASE: dockerapp
     MYSQL_USER: dockerapp
     MYSQL_PASSWORD: tieungao
-  #ports:
-  #  - "33060:3306"
   volumes_from: 
      - data
 data:
@@ -27,6 +20,4 @@ data:
  command: /bin/true
  volumes:
    - /var/lib/mysql 
-#cache:  
-#  image: memcached:latest
 
